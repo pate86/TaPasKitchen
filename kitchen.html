@@ -55,7 +55,22 @@
 
     margin: auto;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px; /* Beispiel: Begrenze die Breite des Formulars */
+  margin-left: 300px; /* Beispiel: Zentriere das Formular auf der Seite */
+  margin-top: -5px;
 
+}
+
+textarea {
+  resize: none; /* Deaktiviere das Ändern der Größe des Textbereichs */
+  padding: 1px;
+  margin-bottom: 5px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
 footer {
     background-color: #343b42;
     color: white;
@@ -64,6 +79,18 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+button {
+  background-color: #4caf50; /* Hintergrundfarbe des Buttons */
+  color: white; /* Textfarbe des Buttons */
+  padding: 10px 15px; /* Innenabstand des Buttons */
+  border: none; /* Entferne die Standard-Rahmen des Buttons */
+  border-radius: 5px; /* Runde die Ecken des Buttons ab */
+  cursor: pointer; /* Ändere den Mauszeiger, um anzuzeigen, dass der Button anklickbar ist */
+}
+
+button:hover {
+  background-color: #45a049; /* Farbe ändern, wenn der Mauszeiger über dem Button ist */
 }
 
     </style>
@@ -95,7 +122,7 @@ footer {
         </div>
     </nav>
 
-    <h1>Bitte gebe deine Zutaten ein:</h1>
+    <h1 style="margin: 20px; margin-left: 310px;">Bitte gebe deine Zutaten ein:</h1>
 
     <main>
 
