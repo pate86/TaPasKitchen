@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>TaPa's Kitchen</title>
+    <script src="js/scripts.js"></script>
+
+    <style>
+        body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; 
+    overflow: hidden;
+}
+
+.background-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: url('img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    
+    
+    
+}
+.navbar {
+    height: 40px; /* Hier kannst du die Höhe nach Bedarf anpassen */
+}
+.navbar-nav {
+        margin-left: auto;  /* links nach rechts verschoben */
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 20px;  /* Fügt Abstand zwischen Links */
+    }
+
+.content {
+    text-align: center;
+    color: rgb(186, 239, 198);
+    margin: 30px 230px 50px auto;
+    font-size: 1px;
+}
+
+.additional-element {
+    background-color: rgba(248, 245, 245, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(11, 11, 11);
+    width: 50%; 
+
+    margin: auto;
+}
+.abgerundeterBg {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: -20px;
+    margin-left: 500px ; /* Zentriert den Container */
+    width: 60%
+    
+}
+
+
+
+footer {
+    background-color: #343b42;
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="background-container">
+
+        <!-- Navigationsleiste -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            
+          <a class="navbar-brand" href="index.html" style="color: aliceblue; font-size: 25px;">TaPa's Kitchen</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <a href="kitchen.html">Kitchen</a>
+                
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html" style="color: aliceblue; font-size: 20px;">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="server/public/kitchen.html" style="color: aliceblue; font-size: 20px;">Kitchen</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Textinhalt auf dem Hintergrundbild -->
+        <div class="content" style="height: 0px;">
+            <h1 id="typewriter-text"></h1>
+        </div>
+        <div style="text-align: center; margin: 50px 20px;">
+            <p class="abgerundeterBg" style="font-size: 20px; color: rgb(69, 68, 68);">
+                <strong>Diese Anwendung macht das Kochen einfach, unterhaltsam und vor allem lecker!</strong>
+                <br>
+                <br>
+                Geben Sie einfach die Lebensmittel ein, die Sie in Ihrem Kühlschrank haben und entdecken Sie maßgeschneiderte Rezepte.
+                Unsere intelligente Anwendung analysiert Ihre Eingaben und generiert speziell auf Ihre vorhandenen Zutaten zugeschnittene Rezeptvorschläge. 
+                <br>
+                <br>Von einfachen Mahlzeiten bis zu beeindruckenden Gerichten – lassen Sie sich inspirieren!
+                Jedes Rezept wird mit klaren Schritt-für-Schritt-Anleitungen geliefert, damit Sie ohne Stress und mit Freude kochen können.
+                </p>
+        </div>
+        <div>
+            <a href="server/public/kitchen.html" class="btn btn-primary" style="font-size: 1.5rem; padding: 0.7rem 1rem; background-color: #94dfa1; height: 50px; margin-left: 925px; margin-top: -50px; color: rgb(247, 245, 245); outline: none;">
+                Lass uns loslegen...
+            </a>
+        </div>
+        
+        
+
+        
+    </div>
+
+    
+ 
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/" target="_blank" class="text-light"><i class="fab fa-facebook-square fa-2x"></i></a>
+                </li>
+                <!-- ... -->
+            </ul>
+            <p class="mb-0">© 2023 TaPa's Kitchen - Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script>
+        const typewriterText = document.getElementById('typewriter-text');
+        const originalText = "Welcome to TaPa's Kitchen...";
+        const speed = 170;
+
+        function typeWriterEffect() {
+            typewriterText.textContent = '';
+            let i = 0;
+
+            function type() {
+                if (i < originalText.length) {
+                    typewriterText.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    setTimeout(erase, speed * 2);
+                }
+            }
+
+            function erase() {
+                if (i >= 0) {
+                    typewriterText.textContent = originalText.substring(0, i - 1);
+                    i--;
+                    setTimeout(erase, speed / 2);
+                } else {
+                    setTimeout(type, speed);
+                }
+            }
+
+            type();
+        }
+
+        typeWriterEffect();
+
+        
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
