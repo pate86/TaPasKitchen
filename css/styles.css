@@ -1,22 +1,13 @@
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0; 
+    margin: 0;
     overflow: hidden;
+    
 }
 
-.background-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background: url('img/bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    
-    
-    
-}
 .navbar {
     height: 40px; /* Hier kannst du die Höhe nach Bedarf anpassen */
 }
@@ -28,11 +19,17 @@ body {
         margin-right: 20px;  /* Fügt Abstand zwischen Links */
     }
 
-.content {
+.content {            /*index.html */
     text-align: center;
     color: rgb(186, 239, 198);
     margin: 30px 230px 50px auto;
     font-size: 1px;
+}
+.content { /*kitchen.html */
+    text-align: center;
+    color: rgb(247, 246, 246);
+    margin: auto;
+    font-size: 60px;
 }
 
 .additional-element {
@@ -54,8 +51,28 @@ body {
     width: 60%
     
 }
-
-
+button {  /*kitchen */
+    background-color: #4caf50; /* Hintergrundfarbe des Buttons */
+    color: white; /* Textfarbe des Buttons */
+    padding: 8px 15px; /* Innenabstand des Buttons */
+    border: none; /* Entferne die Standard-Rahmen des Buttons */
+    border-radius: 10px; /* Runde die Ecken des Buttons ab */
+    cursor: pointer; /* Ändere den Mauszeiger, um anzuzeigen, dass der Button anklickbar ist */
+    margin-left: 200px;  /* button breite */
+    margin-right: 200px; /* button breite */
+  }
+  
+  button:hover { /*kitchen*/
+    background-color: #45a049; /* Farbe ändern, wenn der Mauszeiger über dem Button ist */
+  }
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px; /* !! KITCHEN !!Beispiel: Begrenze die Breite des Formulars */
+    margin-left:200px; /* Beispiel: Zentriere das Formular auf der Seite */
+    margin-top: -30px;
+  
+  }
 
 footer {
     background-color: #343b42;

@@ -1,198 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
+    
     <title>TaPa's Kitchen</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="js/scripts.js"></script>
-
+    
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            overflow: hidden;
+        
 
-        }
-
-        .background-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            background: url("img/bgki.jpg") no-repeat center center fixed;
-            background-size: cover;
+.background-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: url("img/bgki.jpg") no-repeat center center fixed;
+    background-size: cover;
+    
+    
+}
 
 
-        }
 
-        .navbar {
-            height: 40px;
-            /* Hier kannst du die Höhe nach Bedarf anpassen */
-        }
+.additional-element {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(14, 14, 14);
+    width: 50%; 
 
-        .navbar-nav {
-            margin-left: auto;
-            /* links nach rechts verschoben */
-        }
+    margin: auto;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px; /* !! KITCHEN !!Beispiel: Begrenze die Breite des Formulars */
+  margin-left:200px; /* Beispiel: Zentriere das Formular auf der Seite */
+  margin-top: -30px;
 
-        .navbar-nav .nav-item {
-            margin-right: 20px;
-            /* Fügt Abstand zwischen Links */
-        }
+}
 
-        .content {
-            text-align: center;
-            color: rgb(247, 246, 246);
-            margin: auto;
-            font-size: 60px;
-        }
+textarea {
+  resize: none; /* Deaktiviere das Ändern der Größe des Textbereichs */
+  padding: 1px;
+  margin-bottom: 5px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
 
-        .additional-element {
-            background-color: rgba(255, 255, 255, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            color: rgb(14, 14, 14);
-            width: 50%;
+button {
+  background-color: #4caf50; /* Hintergrundfarbe des Buttons */
+  color: white; /* Textfarbe des Buttons */
+  padding: 8px 15px; /* Innenabstand des Buttons */
+  border: none; /* Entferne die Standard-Rahmen des Buttons */
+  border-radius: 10px; /* Runde die Ecken des Buttons ab */
+  cursor: pointer; /* Ändere den Mauszeiger, um anzuzeigen, dass der Button anklickbar ist */
+  margin-left: 200px;  /* button breite */
+  margin-right: 200px; /* button breite */
+}
 
-            margin: auto;
-        }
+button:hover {
+  background-color: #45a049; /* Farbe ändern, wenn der Mauszeiger über dem Button ist */
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 550px;
-            /* Beispiel: Begrenze die Breite des Formulars */
-            margin-left: 200px;
-            /* Beispiel: Zentriere das Formular auf der Seite */
-            margin-top: -30px;
-
-        }
-
-        textarea {
-            resize: none;
-            /* Deaktiviere das Ändern der Größe des Textbereichs */
-            padding: 1px;
-            margin-bottom: 5px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-        }
-
-        footer {
-            background-color: #343b42;
-            color: white;
-            text-align: center;
-            padding: 1px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        button {
-            background-color: #4caf50;
-            /* Hintergrundfarbe des Buttons */
-            color: white;
-            /* Textfarbe des Buttons */
-            padding: 8px 15px;
-            /* Innenabstand des Buttons */
-            border: none;
-            /* Entferne die Standard-Rahmen des Buttons */
-            border-radius: 10px;
-            /* Runde die Ecken des Buttons ab */
-            cursor: pointer;
-            /* Ändere den Mauszeiger, um anzuzeigen, dass der Button anklickbar ist */
-            margin-left: 200px;
-            /* button breite */
-            margin-right: 200px;
-            /* button breite */
-        }
-
-        button:hover {
-            background-color: #45a049;
-            /* Farbe ändern, wenn der Mauszeiger über dem Button ist */
-        }
     </style>
 </head>
-
 <body>
     <div class="background-container">
+        
+        
+         
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            
+        <a class="navbar-brand" href="index.html" style="color: aliceblue; font-size: 25px;" >TaPa's Kitchen</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <a href="kitchen.html">Kitchen</a>
+            
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" style="color: aliceblue; font-size: 20px;">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kitchen.html" style="color: aliceblue; font-size: 20px;">Kitchen</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 style="margin: 50px; margin-left: 220px;">Bitte gebe deine Zutaten ein:</h1>
+
+    <main>
+        <form>
+            <textarea required></textarea>
+            <button type="submit">Absenden</button>
+        </form>
+        
+        <div id="output"></div>
+    </main>
+    <script src="client.js"></script>
+
+   
+    
 
 
-
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-
-            <a class="navbar-brand" href="index.html" style="color: aliceblue; font-size: 25px;">TaPa's Kitchen</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                <a href="kitchen.html">Kitchen</a>
-
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html" style="color: aliceblue; font-size: 20px;">Home <span
-                                class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="kitchen.html" style="color: aliceblue; font-size: 20px;">Kitchen</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <h1 style="margin: 50px; margin-left: 220cdpx;">Bitte gebe deine Zutaten ein:</h1>
-
-        <main>
-            <form>
-                <textarea required></textarea>
-                <button type="submit">Absenden</button>
-            </form>
-
-            <div id="output"></div>
-        </main>
-        <script src="client.js"></script>
-
-
-
-
-
-
-        <footer>
-            <div class="container">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/" target="_blank" class="text-light"><i
-                                class="fab fa-facebook-square fa-2x"></i></a>
-                    </li>
-                    <!-- ... ... -->
-                </ul>
-                <p class="mb-0">© 2023 TaPa's Kitchen - Alle Rechte vorbehalten.</p>
-            </div>
+    
+    <footer>
+        <div class="container">
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/" target="_blank" class="text-light"><i class="fab fa-facebook-square fa-2x"></i></a>
+                </li>
+                <!-- ... ... -->
+            </ul>
+            <p class="mb-0">© 2023 TaPa's Kitchen - Alle Rechte vorbehalten.</p>
+        </div>
     </div>
     </footer>
 
     <script src="client.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-
+    
 
 
 
@@ -201,5 +141,4 @@
 
 
 </body>
-
 </html>
