@@ -11,3 +11,9 @@
 2. [ XX ](#verwendung)
 3. [ XX](#beiträge)
 4. [ XX](#lizenz)
+
+
+
+
+## github befehle 
+git rm --cached $datei (um sachen von github zu löschen) 
