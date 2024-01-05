@@ -1,9 +1,13 @@
 # Tapa's - Kitchen (Koch-Assistent)
-npm init
-npm -install 
-npm install Express 
-npm install dotenv
-pip install openai
-npm install openai@^4.0.0
 
- {pip install -r requirements.txt}
+ ## pip install -r requirements.txt
+
+ installiere erst die umgebungs abhängingheiten 
+ die sind im "requirements.txt"
+
+
+ ## Quellen:
+ 1. [OpenAi documentation](#https://platform.openai.com/docs/api-reference/making-requests)
+2. [ XX ](#verwendung)
+3. [ XX](#beiträge)
+4. [ XX](#lizenz)
