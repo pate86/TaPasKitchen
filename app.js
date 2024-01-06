@@ -69,4 +69,4 @@ const logs = await openai.beta.threads.runs.steps.list(
 logs.body.data.forEach((log) => {
 	console.log(log.step_details);
 });
-//console.log(logs);
+console.log(logs);
