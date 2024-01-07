@@ -64,7 +64,7 @@ const logs = await openai.beta.threads.runs.steps.list(
 );
 
 
-// AB HIER MUSS DIE API ANFRAGEN BEARBEITEN KÖNNEN ## FREE KONTIGENT LEER!!!
+// AB HIER MUSS DIE API ANFRAGEN BEARBEITEN KÖNNEN ## FREE KONTIGENT LEER!!!!!
 
 
 logs.body.data.forEach((log) => {
