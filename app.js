@@ -25,7 +25,7 @@ const assistant = await openai.beta.assistants.retrieve(
 console.log(assistant);
 
 //Threads
-// Threads variable ertellen. (ID wird sichtbar im terminal)
+// Threads variable ertellen. (ID wird sichtbar im terminal) 
 //const thread = await openai.beta.threads.create();
 
 // Message variable erstellen um es an threads variable hinzuzufügen
@@ -40,6 +40,7 @@ console.log(assistant);
 //	instructions: "Address the user as hobby Koch"
 //});
 
+// RUN ASSISTANT um den neuen status anzuzeigen von zeile 37-41 (zeile 37-41 ausklammern)
 //const run = await openai.beta.threads.runs.retrieve(
 //	"thread_djYKHVoVDgIKCuNvv3ycGPq4",
 //	"run_Cax9AvMJDTIhQCCxlWqO1RLA"
