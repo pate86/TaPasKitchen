@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    background: url('/TaPas-Kitchen/img/bgki.jpg') no-repeat center center fixed;
+    background: url('/tapa-kitchen/img/bgki.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
