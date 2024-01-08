@@ -16,8 +16,8 @@ das zeigt, dass der assistant die nachrichten verarbeitet.
 
  ## Quellen:
  1. [OpenAi documentation](https://platform.openai.com/docs/api-reference/making-requests)
-2. [ XX ](#verwendung)
-3. [ XX](#beiträge)
+2. [Web Design "cdnjs" ](https://cdnjs.com/libraries/font-awesome)
+3. [ Google fonts ](https://developers.google.com/fonts/docs/getting_started?hl=de)
 4. [ XX](#lizenz)
 
 
