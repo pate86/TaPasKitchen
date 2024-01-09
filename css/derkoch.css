@@ -6,6 +6,29 @@
     box-sizing: border-box;
 }
 
+.navbar {
+    overflow: hidden;
+    
+    background-color: #fff;
+    background: linear-gradient(to right, rgb(0, 0, 0), #ffffff00);
+    position: static; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 640px; /* Full width */
+    border-radius: 10px; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+  
+  /* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+  
+  /* Main content */
+  .main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+  }
 body{
     flex:auto;
     display: flex;
@@ -21,18 +44,19 @@ body{
 
 .container{
     width: 640px;                                                               /* größe der chatbox, breite kann konfiguriert werden */
-    background-color: #17202a;                                                /* hintergrundfarbe der chatbox */
+    background-color: hsla(0, 0%, 27%, 0.457);                                                /* hintergrundfarbe der chatbox */
     border-radius: 10px;                                                        /* CHAT BOX radius der ecken */
     box-shadow: 5px 0px 10px rgba(0,0,0,0.03);
     position: relative;
 }
 
 .card-header{
-    background-color: #212f4d;                                                 /* TITEL chatbox hintergrundfarbe*/
+    background-color: #13131384;                                                 /* TITEL chatbox hintergrundfarbe*/
     border-radius: 10px 10px 0px 0px;                                            /* CHAT Titelbereich radius der ecken */
     padding: 0rem;
     color: #fff;
     width: 100%;
+    font-family: "poppins", sans-serif;
 }
 
 .card{
@@ -72,7 +96,7 @@ body{
 }
 
 .card-body .chat-bot p {
-    background-color: #45a049;
+    background-color: #5d9efffa;
     border-radius: 10px;
     padding: 0.8rem;
     width: 50%;
@@ -80,7 +104,7 @@ body{
 }
 
 .card-body .user p {
-    background-color: #3498db;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 0.8rem;
     width: 50%;
@@ -101,15 +125,15 @@ body{
     justify-content: center;
     border-radius: 50px;
     margin-right: 0,5rem;
-    border: 2px solid #212f3d;
+    border: 1px solid #8a767663;
 }
 
 .user-icon .fa-robot {
-    color: #45a049;
+    color: #5d9efffa;
 }
 
 .user-icon .fa-user {
-    color: #3498db;
+    color: #ffffff;
 }
 
 .card-footer {
@@ -127,7 +151,7 @@ body{
     width: 100%;
     display: flex;
     padding: 1.5rem;
-    background-color: #212f3d;
+    background-color: #00000099;
     border-radius: 10px;
     color: #fff;
     font-size: 1rem;
@@ -142,6 +166,6 @@ body{
 
 .sending-icon .fa-paper-plane{
     color: #fff;
-    font-size: 1,5rem;
+    font-size: 2rem;
     cursor: pointer;
 }
