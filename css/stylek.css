@@ -52,6 +52,26 @@ form {
         margin-top: -30px;
 }
 
+footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #2d3135;
+        padding: 5 px 0;
+        color: white;
+    }
+    
+    .container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .list-inline-item {
+        margin-right: 10px; /* FB icon */
+    }
+    
+
     
 
 /*___________BOT______________*/
