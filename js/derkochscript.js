@@ -3,7 +3,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     const targetElement = document.getElementById('typewriter');
-    const textArray = ["Welcome to TaPa's Kitchen...", "Explore our delicious recipes", "Enjoy cooking with ease..."];
+    const textArray = ["Welcome to TaPa's Kitchen...", "Explore our delicious recipes...", "Enjoy cooking with ease..."];
     let textIndex = 0;
     let charIndex = 0;
 
