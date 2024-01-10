@@ -15,7 +15,7 @@ function manageChat() {
     cardBodyEl.appendChild(messageEl(userMessage, "user"));
 
     setTimeout(() => {
-        cardBodyEl.appendChild(messageEl("Ich schicke dir gleich etwas Köstliches zu, Augenblick bitte. . .", "chat-bot"));
+        cardBodyEl.appendChild(messageEl("Einen Moment bitte, ich werde dir einige Rezepte zusammenstellen...", "chat-bot"));
     }, 600);
 }
 
@@ -26,9 +26,9 @@ const messageEl = (message,className) =>{
     chatEl.classList.add("chat", `${className}`);
     let chatContent = 
         className === "chat-bot"
-            ? `<span class="user-icon"><i class="fa fa-robot"></i></span>
+            ? `<span class="user-icon"><img src="img/koch.png" alt="Bot-Bild"></span>
     <p>${message}</p>`
-            : ` <span class="user-icon"><i class="fa fa-user"></i></span>
+            : ` <span class="user-icon"><img src="img/topf.png" alt="Bot-Bild"></span>
     <p>${message}</p>`;
     chatEl.innerHTML = chatContent;
     return chatEl;
