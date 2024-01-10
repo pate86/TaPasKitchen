@@ -93,13 +93,13 @@ footer {
 
   .container {
         width: 700px;
-        height: 430px;
+        height: 480px;
         background-color: hsla(0, 22%, 95%, 0.457);
         border-radius: 20px;
         box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.03);
         position: relative;
         margin-top: 40px;
-        margin-left: 70px;
+        margin-left: 100px;
     }
 
 .card-header{
@@ -226,5 +226,5 @@ footer {
     color: #ffffff;
     font-size: 2rem;
     cursor: pointer;
-    margin-top: 450px;
+    margin-top: 500px;
 }
