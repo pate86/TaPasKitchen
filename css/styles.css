@@ -40,8 +40,11 @@ body {
     height: 50px;
     margin-left: 640px;
     margin-top: 20px;
-    
-}
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  
 
 .additional-element {
     background-color: rgba(248, 245, 245, 0.7);
@@ -62,7 +65,7 @@ body {
     width: 60%
 }
 footer {
-    background-color: #343b42;
+    background-color: #343b42dd;
     color: white;
     text-align: center;
     padding: 1px 0;

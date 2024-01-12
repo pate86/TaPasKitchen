@@ -79,7 +79,7 @@ function manageChat() {
     cardBodyEl.appendChild(messageEl(userMessage, "user"));
 
     setTimeout(() => {
-        const robotMessage = messageEl("Ich schicke dir gleich etwas Köstliches zu, Augenblick bitte. . .", "chat-bot");
+        const robotMessage = messageEl("Einen Moment bitte. Ich erstelle einige Rezepte für Dich...", "chat-bot");
         cardBodyEl.append(robotMessage);
         chatGenerator(robotMessage);
     }, 600);
@@ -92,9 +92,9 @@ const messageEl = (message, className) =>{
     chatEl.classList.add("chat", `${className}`);
     let chatContent = 
         className === "chat-bot"
-            ? `<span class="user-icon"><i class="fa fa-robot"></i></span>
+            ? `<span class="user-icon"><img src="img/koch1.png" alt="Bot-Bild"></span>
     <p class='robot'>${message}</p>`
-            : ` <span class="user-icon"><i class="fa fa-user"></i></span>
+            : ` <span class="user-icon"><img src="img/topf.png" alt="Bot-Bild"></span>
     <p>${message}</p>`;
     chatEl.innerHTML = chatContent;
     return chatEl;

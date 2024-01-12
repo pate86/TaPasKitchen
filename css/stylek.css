@@ -56,7 +56,7 @@ footer {
         position: absolute;
         bottom: 0;
         width: 100%;
-        background-color: #2d3135;
+        background-color: #2d3135eb;
         padding: 5 px 0;
         color: white;
     }
@@ -92,14 +92,15 @@ footer {
   }
 
   .container {
-        width: 700px;
-        height: 480px;
-        background-color: hsla(0, 22%, 95%, 0.457);
+        width: 830px;
+        height: 510px;
+        background-color: hsla(0, 0%, 100%, 0.121);
         border-radius: 20px;
         box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.03);
         position: relative;
-        margin-top: 40px;
-        margin-left: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+        
     }
 
 .card-header{
@@ -147,7 +148,7 @@ footer {
 }
 
 .card-body .chat-bot p {
-    background-color: #79dc8ffa;
+    background-color: #62c3d6fa;
     border-radius: 10px;
     padding: 0.8rem;
     width: 50%;
@@ -176,7 +177,7 @@ footer {
     justify-content: center;
     border-radius: 50px;
     margin-right: 0,5rem;
-    border: 1px solid #f4f0f063;
+    border: 1px solid #68696963;
 }
 
 .user-icon .fa-robot {
@@ -203,7 +204,7 @@ footer {
     width: 100%;
     display: flex;
     padding: 1.5rem;
-    background-color: #4b4a4a99;
+    background-color: #25242499;
     border-radius: 20px;
     color: #dfdbdb;
     font-size: 1rem;
@@ -214,7 +215,7 @@ footer {
     
 }
 .card-footer textarea::placeholder {
-        color: #ffffff; /* Hier die gewünschte Textfarbe für den Platzhaltertext */
+        color: #c9c4c4; /* Hier die gewünschte Textfarbe für den Platzhaltertext */
     }
 
 .sending-icon {
@@ -226,5 +227,5 @@ footer {
     color: #ffffff;
     font-size: 2rem;
     cursor: pointer;
-    margin-top: 500px;
+    margin-top: 560px;
 }
