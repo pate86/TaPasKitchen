@@ -10,7 +10,7 @@ const openai = new OpenAI({
 // assistent config
 //const assistant = await openai.beta.assistants.create({
 //	name: "TaPa's Koch",
-//	instructions: "Du bist ein koch der mit wenig zutaten gute gerichte zaubert",
+//	instructions: "Ab sofort bist du ein Koch und wirst durch die Eingaben von Nahrungsmitteln und Zutaten viele verschiedene Gerichte mit detaillierten Rezepten zurückliefern. Du beantwortest ausschließlich Fragen rund um das Thema Kochen und Essen.",
 //	tools: [
 //		{
 //			type: "code_interpreter",
@@ -20,7 +20,7 @@ const openai = new OpenAI({
 //});
 
 const assistant = await openai.beta.assistants.retrieve(
-	"asst_AEUXuvM6wzra6jn0r62MUcSu"
+	"asst_F6MmFkeweReqmTJFudGD4oLJ"
 );
 console.log(assistant);
 
@@ -42,14 +42,14 @@ console.log(assistant);
 
 // RUN ASSISTANT um den neuen status anzuzeigen von zeile 37-41 (zeile 37-41 ausklammern)
 //const run = await openai.beta.threads.runs.retrieve(
-//	"thread_djYKHVoVDgIKCuNvv3ycGPq4",
-//	"run_Cax9AvMJDTIhQCCxlWqO1RLA"
+//	"thread_8i3wJ9A6k2UQ06ahZ9J3OZcp",
+//	"run_L80GZJJQbV9oeHqh6XemR3sd"
 //);
 
 //console.log(run);
 
 //const messages = await openai.beta.threads.messages.list(
-//	"thread_djYKHVoVDgIKCuNvv3ycGPq4"
+//	"thread_8i3wJ9A6k2UQ06ahZ9J3OZcp"
 //);
 
 //console.log(messages);
@@ -59,8 +59,8 @@ console.log(assistant);
 //});
 
 const logs = await openai.beta.threads.runs.steps.list(
-	"thread_djYKHVoVDgIKCuNvv3ycGPq4",
-	"run_Cax9AvMJDTIhQCCxlWqO1RLA"
+	"thread_8i3wJ9A6k2UQ06ahZ9J3OZcp",
+	"run_L80GZJJQbV9oeHqh6XemR3sd"
 );
 
 
