@@ -9,7 +9,7 @@ const openai = new OpenAI({
 
 // assistent config
 //const assistant = await openai.beta.assistants.create({
-//	name: "TaPas Koch",
+//	name: "TaPa's Koch",
 //	instructions: "Du bist ein koch der mit wenig zutaten gute gerichte zaubert",
 //	tools: [
 //		{
