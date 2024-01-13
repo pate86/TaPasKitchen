@@ -28,79 +28,110 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(type, 500);
 });
 
-//___________________________________________________________________________________
 "use strict";
-
 
 const inputEl = document.querySelector(".input-chat");
 const btnEl = document.querySelector(".fa-paper-plane");
 const cardBodyEl = document.querySelector(".card-body");
 
 let userMessage;
-const API_KEY = "APIKEY!!!!!!!!!!!!!!!!!!!!";
-const URL = "https://api.openai.com/v1/chat/completions";
+
+// ________________ Entferne die harten Coded API-Schlüssel und URL ______________________
+ const API_KEY = "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";
+ const URL = "https://api.openai.com/v1/chat/completions";
+// _____________________________________________________________________________________
 
 const chatGenerator = (robot) => {
-    robot = robot.querySelector(".robot");
-    const requestBody = {
-        model: "gpt-3.5-turbo",
-        messages: [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": userMessage}],
-        temperature: 0.7
-    };
+  robot = robot.querySelector(".robot");
+  const requestBody = {
+      model: "gpt-3.5-turbo",
+      messages: [{ "role": "system", "content": "You are a helpful assistant." }, { "role": "user", "content": userMessage }],
+      temperature: 0.7
+  };
 
-    const requestOption = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json", // Hier wurde der Header korrigiert
-            Authorization: `Bearer ${API_KEY}`,
-        },
-        body: JSON.stringify(requestBody), // Body der Anfrage verwendet jetzt die korrekte Struktur und Variable
-    };
+  const requestOption = {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json", // Hier wurde der Header korrigiert
+          // Authorization: `Bearer ${API_KEY}`, // Entferne den harten Coded API-Schlüssel
+      },
+      body: JSON.stringify(requestBody), // Body der Anfrage verwendet jetzt die korrekte Struktur und Variable
+  };
 
-    fetch(URL, requestOption)
-        .then((res) => res.json())
-        .then((data) => {
-            robot.textContent = data.choices[0].message.content;
-        })
-        .catch((error) => {
-            console.error("Fehler beim Anfordern der Chat-Antwort:", error);
-            robot.textContent = "Es gab leider ein Problem beim Laden der Antwort.";
-        });
+  // ________________ Nutze relative Pfade, um Probleme mit CORS zu vermeiden ________________
+  fetch('/openai', requestOption)
+      .then((res) => res.json())
+      .then((data) => {
+          robot.textContent = data.response;
+      })
+      .catch((error) => {
+          console.error("Fehler beim Anfordern der Chat-Antwort:", error);
+          robot.textContent = "Es gab leider ein Problem beim Laden der Antwort.";
+      });
 };
-
-
 
 // manage chat
 function manageChat() {
-    userMessage = inputEl.value.trim();
+  userMessage = inputEl.value.trim();
 
-    if (!userMessage) return;
-    inputEl.value = "";    
+  if (!userMessage) return;
+  inputEl.value = "";
 
-    cardBodyEl.appendChild(messageEl(userMessage, "user"));
+  cardBodyEl.appendChild(messageEl(userMessage, "user"));
 
-    setTimeout(() => {
-        const robotMessage = messageEl("Einen Moment bitte. Ich erstelle einige Rezepte für Dich...", "chat-bot");
-        cardBodyEl.append(robotMessage);
-        chatGenerator(robotMessage);
-    }, 600);
+  setTimeout(() => {
+      const robotMessage = messageEl("Einen Moment bitte. Ich erstelle einige Rezepte für Dich...", "chat-bot");
+      cardBodyEl.append(robotMessage);
+      chatGenerator(robotMessage);
+  }, 600);
 }
 
-
 //messages 
-const messageEl = (message, className) =>{
-    const chatEl = document.createElement("div");
-    chatEl.classList.add("chat", `${className}`);
-    let chatContent = 
-        className === "chat-bot"
-            ? `<span class="user-icon"><img src="img/koch1.png" alt="Bot-Bild"></span>
-    <p class='robot'>${message}</p>`
-            : ` <span class="user-icon"><img src="img/topf.png" alt="Bot-Bild"></span>
-    <p>${message}</p>`;
-    chatEl.innerHTML = chatContent;
-    return chatEl;
+const messageEl = (message, className) => {
+  const chatEl = document.createElement("div");
+  chatEl.classList.add("chat", `${className}`);
+  let chatContent =
+      className === "chat-bot"
+          ? `<span class="user-icon"><img src="img/koch1.png" alt="Bot-Bild"></span>
+  <p class='robot'>${message}</p>`
+          : ` <span class="user-icon"><img src="img/topf.png" alt="Bot-Bild"></span>
+  <p>${message}</p>`;
+  chatEl.innerHTML = chatContent;
+  return chatEl;
 };
 
-
-
 btnEl.addEventListener("click", manageChat);
+
+//___frontend anpassung um nachrichten an den server zu schicken und zu empfangen________________________________________________-
+
+const chatbotFunction = async (userMessage) => {
+  const response = await fetch('/openai', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ message: userMessage }),
+  });
+
+  const data = await response.json();
+  return data.response;
+};
+
+// ...
+
+// Ändere die manageChat-Funktion
+function manageChat() {
+  userMessage = inputEl.value.trim();
+
+  if (!userMessage) return;
+  inputEl.value = "";
+
+  cardBodyEl.appendChild(messageEl(userMessage, 'user'));
+
+  setTimeout(async () => {
+      const robotMessage = messageEl('Einen Moment bitte. Ich erstelle einige Rezepte für Dich...', 'chat-bot');
+      cardBodyEl.append(robotMessage);
+      const response = await chatbotFunction(userMessage);
+      robotMessage.querySelector('.robot').textContent = response;
+  }, 600);
+}
