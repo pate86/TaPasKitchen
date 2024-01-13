@@ -32,7 +32,7 @@ body {
         font-size: 60px;
 }
 button { 
-        background-color: #4caf50; 
+        background-color: #5ede64; 
         color: white; 
         padding: 8px 15px; /* Innenabstand */
         border: none; /* rahmen */
@@ -71,7 +71,17 @@ footer {
         margin-right: 10px; /* FB icon */
     }
     
-
+    footer {
+        background-color: #343b42dd;
+        color: white;
+        text-align: center;
+        padding: 1px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    
     
 
 /*___________BOT______________*/
@@ -92,8 +102,8 @@ footer {
   }
 
   .container {
-        width: 830px;
-        height: 510px;
+        width: 900px;
+        height: 570px;
         background-color: hsla(0, 0%, 100%, 0.121);
         border-radius: 20px;
         box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.03);
@@ -148,7 +158,7 @@ footer {
 }
 
 .card-body .chat-bot p {
-    background-color: #62c3d6fa;
+    background-color: #61cce2fa;
     border-radius: 10px;
     padding: 0.8rem;
     width: 50%;
@@ -204,7 +214,7 @@ footer {
     width: 100%;
     display: flex;
     padding: 1.5rem;
-    background-color: #25242499;
+    background-color: #47464699;
     border-radius: 20px;
     color: #dfdbdb;
     font-size: 1rem;
@@ -214,13 +224,18 @@ footer {
     margin-top: 5px;
     
 }
-footer {
-    background-color: #343b42dd;
-    color: white;
-    text-align: center;
-    padding: 1px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.card-footer textarea::placeholder {
+        color: #ffffff; /* Hier die gewünschte Textfarbe für den Platzhaltertext */
+    }
+
+.sending-icon {
+    position: absolute;
+    right: 30px;
 }
 
+.sending-icon .fa-paper-plane{
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 730px;
+}
