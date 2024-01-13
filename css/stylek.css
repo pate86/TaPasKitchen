@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    background: url('/tapa-kitchen/TaPas-Kitchen/img/bgki.jpg') no-repeat center center fixed;
+    background: url('../img/bgki.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -214,18 +214,13 @@ footer {
     margin-top: 5px;
     
 }
-.card-footer textarea::placeholder {
-        color: #c9c4c4; /* Hier die gewünschte Textfarbe für den Platzhaltertext */
-    }
-
-.sending-icon {
-    position: absolute;
-    right: 30px;
+footer {
+    background-color: #343b42dd;
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.sending-icon .fa-paper-plane{
-    color: #ffffff;
-    font-size: 2rem;
-    cursor: pointer;
-    margin-top: 610px;
-}
